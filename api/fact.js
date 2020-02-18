@@ -1,8 +1,7 @@
-conat WikiFakt = require('wikifakt');
+const WikiFakt = require('wikifakt');
   
 module.exports = async (req, res) => {
-  WikiFakt
-    .getRandomFact()
-    .then(fact => res.status(200).send(fact))
+  const fact = WikiFakt.getRandomFact()
 	
+  res.status(200).send(fact);
 };
